@@ -75,3 +75,35 @@ document.getElementById('background-color-menu').addEventListener('click', funct
 document.getElementById('background-color').addEventListener('input', function () {
     document.body.style.backgroundColor = this.value;
 });
+
+// Event listener to show the chatbot
+document.getElementById('chatbot-menu').addEventListener('click', function () {
+    const chatbot = document.getElementById('chatbot');
+    chatbot.style.display = 'flex';
+});
+
+// Event listener to close the chatbot
+document.getElementById('close-chatbot').addEventListener('click', function () {
+    document.getElementById('chatbot').style.display = 'none';
+});
+
+// Event listener for sending messages in the chatbot
+document.getElementById('send-chatbot-message').addEventListener('click', function () {
+    const input = document.getElementById('chatbot-input');
+    const message = input.value.trim();
+
+    if (message) {
+        const messageContainer = document.getElementById('chatbot-messages');
+        const userMessage = document.createElement('p');
+        userMessage.textContent = `You: ${message}`;
+        messageContainer.appendChild(userMessage);
+
+        // Add a simulated AI response
+        const botMessage = document.createElement('p');
+        botMessage.textContent = `AI: This is a simulated response to "${message}".`;
+        messageContainer.appendChild(botMessage);
+
+        messageContainer.scrollTop = messageContainer.scrollHeight; // Scroll to the bottom
+        input.value = '';
+    }
+});
