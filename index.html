@@ -14,6 +14,7 @@
         <nav class="menu">
             <ul>
                 <li><a href="#" id="background-color-menu">Choose Background Color</a></li>
+                <li><a href="#" id="chatbot-menu">Chatbot AI</a></li>
             </ul>
         </nav>
     </header>
@@ -22,6 +23,21 @@
     <div class="color-picker" id="color-picker">
         <label for="background-color">Select Background Color:</label>
         <input type="color" id="background-color" value="#f4f4f4">
+    </div>
+
+    <!-- Chatbot Interface (Hidden initially) -->
+    <div class="chatbot" id="chatbot">
+        <div class="chatbot-header">
+            <h3>Chatbot AI</h3>
+            <button id="close-chatbot">X</button>
+        </div>
+        <div class="chatbot-messages" id="chatbot-messages">
+            <p>Welcome to Chatbot AI! How can I assist you today?</p>
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="chatbot-input" placeholder="Type your message...">
+            <button id="send-chatbot-message">Send</button>
+        </div>
     </div>
 
     <main>
@@ -43,6 +59,15 @@
 
     <footer>
         <p>&copy; 2024 EVENTs TIMEDOWN. All Rights Reserved.</p>
+    </footer>
+
+    <script src="jk.js"></script>
+<script src="jss.js"></script>
+<script src="ai.js"></script>
+
+
+</body>
+</html>
     </footer>
 
     <script src="jk.js"></script>
